@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+    </head>
+    <body>
+        <div class="col-md-4 col-md-offset-4">
+            <div class="well">
+                <form class="form-horizontal">
+                <fieldset>
+                
+                <!-- Form Name -->
+                <legend>Menards Call Sheets</legend>
+                
+                <!-- Select Basic -->
+                <span class="form-group-top">
+                  <label class="col-md-6 control-label" for="store_location">Location</label>
+                  <span class="col-md-6">
+                    <select id="store_location" name="store_location" class="form-control">
+                      <option value="3053_ECEA">Store #3053, Eau Claire East</option>
+                      <option value="3011_ECWE">Store #3011, Eau Claire West</option>
+                    </select>
+                  </span>
+                  <label class="col-md-6 control-label" for="store_layout">Layout</label>
+                  <span class="col-md-6">
+                    <select id="store_layout" name="store_layout" class="form-control">
+                      <option value="layout_p5">P5</option>
+                      <option value="layout_rp5">Reverse P5</option>
+                      <option value="layout_p5m">P5-MEZZ</option>
+                      <option value="layout_rp5m">Reverse P5-MEZZ</option>
+                      <option value="layout_np">Non-Prototype</option>
+                    </select>
+                  </span>
+                </span>
+
+                <legend>Colonial Elegance</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                  <label class="col-md-6 control-label" for="ce_dept_manager">Dept Manager</label>  
+                  <div class="col-md-6">
+                  <input id="ce_dept_manager" name="ce_dept_manager" type="text" placeholder="" class="form-control input-md">
+                    
+                  </div>
+                </div>
+                
+                <!-- File Button --> 
+                <div class="form-group">
+                  <label class="col-md-6 control-label" for="ce_upload_button">Upload Call Sheet (not required if this form is filled out 100%)</label>
+                  <div class="col-md-6">
+                    <input id="ce_upload_button" name="ce_upload_button" class="input-file" type="file">
+                  </div>
+                </div>
+                
+                <!-- Multiple Radios -->
+                <div class="form-group">
+                  <label class="col-md-6 control-label" for="ce_sd_dp">Stair Displays / Display Panels, In working order?</label>
+                  <div class="col-md-6">
+                  <div class="radio">
+                    <label for="ce_sd_dp-0">
+                      <input type="radio" name="ce_sd_dp" id="ce_sd_dp-0" value="1" checked="checked">
+                      Yes
+                    </label>
+                	</div>
+                  <div class="radio">
+                    <label for="ce_sd_dp-1">
+                      <input type="radio" name="ce_sd_dp" id="ce_sd_dp-1" value="2">
+                      No, See notes below
+                    </label>
+                	</div>
+                  </div>
+                </div>
+                
+                <!-- Multiple Radios -->
+                <div class="form-group">
+                  <label class="col-md-6 control-label" for="ce_bins">Bin Boxes, In working order?</label>
+                  <div class="col-md-6">
+                  <div class="radio">
+                    <label for="ce_bins-0">
+                      <input type="radio" name="ce_bins" id="ce_bins-0" value="1" checked="checked">
+                      Yes
+                    </label>
+                	</div>
+                  <div class="radio">
+                    <label for="ce_bins-1">
+                      <input type="radio" name="ce_bins" id="ce_bins-1" value="2">
+                      No, See notes below
+                    </label>
+                	</div>
+                  </div>
+                </div>
+                
+                <!-- Multiple Radios -->
+                <div class="form-group">
+                  <label class="col-md-6 control-label" for="ce_tv">TV Display, In working order?</label>
+                  <div class="col-md-6">
+                  <div class="radio">
+                    <label for="ce_tv-0">
+                      <input type="radio" name="ce_tv" id="ce_tv-0" value="1" checked="checked">
+                      Yes
+                    </label>
+                	</div>
+                  <div class="radio">
+                    <label for="ce_tv-1">
+                      <input type="radio" name="ce_tv" id="ce_tv-1" value="2">
+                      No, See notes below
+                    </label>
+                	</div>
+                  <div class="radio">
+                    <label for="ce_tv-2">
+                      <input type="radio" name="ce_tv" id="ce_tv-2" value="3">
+                      Not applicable
+                    </label>
+                	</div>
+                  </div>
+                </div>
+                
+                <!-- Textarea -->
+                <div class="form-group">
+                  <label class="col-md-6 control-label" for="ce_id_cards">ID Cards missing?</label>
+                  <div class="col-md-6">                     
+                    <textarea class="form-control" id="ce_id_cards" name="ce_id_cards" placeholder="SKU's of missing cards here, note the size (tall or short)"></textarea>
+                  </div>
+                </div>
+                
+                <!-- Multiple Checkboxes -->
+                <div class="form-group">
+                  <label class="col-md-6 control-label" for="ce_lit">Literature Reorder?</label>
+                  <div class="col-md-6">
+                  <div class="checkbox">
+                    <label for="ce_lit-0">
+                      <input type="checkbox" name="ce_lit" id="ce_lit-0" value="1">
+                      Stair Parts Tearpads
+                    </label>
+                	</div>
+                  <div class="checkbox">
+                    <label for="ce_lit-1">
+                      <input type="checkbox" name="ce_lit" id="ce_lit-1" value="2">
+                      Closet Door Brochures
+                    </label>
+                	</div>
+                  <div class="checkbox">
+                    <label for="ce_lit-2">
+                      <input type="checkbox" name="ce_lit" id="ce_lit-2" value="3">
+                      Column Tearpads
+                    </label>
+                	</div>
+                  </div>
+                </div>
+                
+                <!-- Multiple Checkboxes -->
+                <div class="form-group">
+                  <label class="col-md-6 control-label" for="ce_general">General Checklist</label>
+                  <div class="col-md-6">
+                    <div class="checkbox">
+                      <label for="ce_general-0">
+                        <input type="checkbox" name="ce_general" id="ce_general-0" value="1">
+                        Straighten shelves, clean up garbage
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="ce_general-1">
+                        <input type="checkbox" name="ce_general" id="ce_general-1" value="2">
+                        Discuss Out-Of-Stocks &amp; display issues with On-Duty Dept Manager
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="ce_general-2">
+                        <input type="checkbox" name="ce_general" id="ce_general-2" value="">
+                        Defect damaged/bad products (w/ manager approval)
+                      </label>
+                  	</div>
+                  	<div class="checkbox">
+                      <label for="ce_general-3">
+                        <input type="checkbox" name="ce_general" id="ce_general-3" value="">
+                        No missing bintags?
+                      </label>
+                  	</div>
+                  </div>
+                </div>
+                
+                <!-- Textarea -->
+                <div class="form-group">
+                  <label class="col-md-6 control-label" for="textarea">Notes</label>
+                  <div class="col-md-6">                     
+                    <textarea class="form-control" id="textarea" name="textarea"></textarea>
+                  </div>
+                </div>
+                
+                <!-- Button (Double) -->
+                <div class="form-group">
+                  <label class="col-md-6 control-label" for="button1id">Submit Data</label>
+                  <div class="col-md-6">
+                    <button id="button1id" name="button1id" class="btn btn-success">Submit</button>
+                    <button id="button2id" name="button2id" class="btn btn-danger">Reset</button>
+                  </div>
+                </div>
+                
+                </fieldset>
+                </form>
+            </div>
+        </div>
+        
+        
+    </body>
+    
+</html>
