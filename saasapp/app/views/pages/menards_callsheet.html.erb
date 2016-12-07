@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+      <link rel="stylesheet" href="//jqueryui.com/resources/demos/style.css">
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script>
+      $( function() {
+        $( "#tabs" ).tabs();
+        $('#tabs').tabs({active:0});
+      } );
+      </script>
+    </head>
+    <body>
+      <div class="col-md-6">
+        <div class="well">
+          <legend class="text-center">Menards Call Sheets</legend>
+          <form class="form-horizontal">
+            <div class="form-group-top">
+              <label class="control-label" for="store_location">Location</label>
+              <div>
+                <select id="store_location" name="store_location" class="form-control">
+                  <option value="store_null">Please Select Location</option>
+                  <option value="3053_ECEA">Store #3053, Eau Claire East</option>
+                  <option value="3011_ECWE">Store #3011, Eau Claire West</option>
+                </select>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="well">
+          <form class="form-horizontal">
+            <div id="tabs">
+              <ol>
+                <li><a href="#tabs-1">Colonial Elegance</a></li>
+                <li><a href="#tabs-2">Genie</a></li>
+                <li><a href="#tabs-3">Honeywell</a></li>
+                <li><a href="#tabs-4">Summit Brands</a></li>
+                <li><a href="#tabs-5">All Stone</a></li>
+                <li><a href="#tabs-6">Tuscany</a></li>
+    <!-- Colonial Elegance Tab -->
+                <div id="tabs-1">
+                  <div class="form-group">
+                    <label class="control-label" for="ce_dept_manager"><br>Dept Manager</label>  
+                    <div>
+                      <br>
+                      <input id="ce_dept_manager" name="ce_dept_manager" type="text" placeholder="" class="form-control input-md">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-6 control-label" for="ce_upload">Upload Call Sheet<br>(Not required if this form is filled out 100%)</label>
+                    <div class="col-md-6">
+                      <input id="ce_upload" name="ce_upload" class="input-file" type="file">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-6 control-label" for="ce_sd_dp">Stair Displays or Display Panels conditon</label>
+                    <div class="col-md-6">
+                    <div class="radio">
+                      <label for="ce_sd_dp-0">
+                        <input type="radio" name="ce_sd_dp" id="ce_sd_dp-0" value="ce_sd_dp-1">
+                        Undamaged
+                      </label>
+                  	</div>
+                    <div class="radio">
+                      <label for="ce_sd_dp-1">
+                        <input type="radio" name="ce_sd_dp" id="ce_sd_dp-1" value="ce_sd_dp-2">
+                        Damaged, See notes below
+                      </label>
+                  	</div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-6 control-label" for="ce_bins">Bin Boxes condition</label>
+                    <div class="col-md-6">
+                    <div class="radio">
+                      <label for="ce_bins-0">
+                        <input type="radio" name="ce_bins" id="ce_bins-0" value="ce_bins-1">
+                        Undamaged
+                      </label>
+                  	</div>
+                    <div class="radio">
+                      <label for="ce_bins-1">
+                        <input type="radio" name="ce_bins" id="ce_bins-1" value="ce_bins-2">
+                        Damaged, See notes below
+                      </label>
+                  	</div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-6 control-label" for="ce_tv">TV Display still installed?</label>
+                    <div class="col-md-6">
+                      <div class="radio">
+                        <label for="ce_tv-0">
+                          <input type="radio" name="ce_tv" id="ce_tv-0" value="ce_tv-1">
+                          Yes
+                        </label>
+                    	</div>
+                      <div class="radio">
+                        <label for="ce_tv-1">
+                          <input type="radio" name="ce_tv" id="ce_tv-1" value="ce_tv-2">
+                          No
+                        </label>
+                    	</div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-6 control-label" for="ce_id_cards">ID Cards missing?</label>
+                    <div class="col-md-6">                     
+                      <textarea class="form-control" id="ce_id_cards" name="ce_id_cards" placeholder="SKU's of missing cards here, note the size (tall or short)"></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-6 control-label" for="ce_tv">Closet door display condition</label>
+                    <div class="col-md-6">
+                      <div class="radio">
+                        <label for="ce_tv-0">
+                          <input type="radio" name="ce_tv" id="ce_tv-0" value="ce_tv-1">
+                          Undamaged
+                        </label>
+                    	</div>
+                      <div class="radio">
+                        <label for="ce_tv-1">
+                          <input type="radio" name="ce_tv" id="ce_tv-1" value="ce_tv-2">
+                          Damaged, see notes below
+                        </label>
+                    	</div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-6 control-label" for="ce_id_cards">Closet Door or Barn Door POP missing?</label>
+                    <div class="col-md-6">                     
+                      <textarea class="form-control" id="ce_id_cards" name="ce_id_cards" placeholder="ID or individual SKU# of missing POP here"></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-6 control-label" for="ce_lit">Literature Reorder?</label>
+                    <div class="col-md-6">
+                    <div class="checkbox">
+                      <label for="ce_lit-1">
+                        <input type="checkbox" name="ce_lit-1" id="ce_lit-1" value="ce_lit-1">
+                        Stair Parts Tearpads
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="ce_lit-2">
+                        <input type="checkbox" name="ce_lit-2" id="ce_lit-2" value="ce_lit-2">
+                        Closet Door Brochures
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="ce_lit-3">
+                        <input type="checkbox" name="ce_lit-3" id="ce_lit-3" value="ce_lit-3">
+                        Column Tearpads
+                      </label>
+                  	</div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-6 control-label" for="ce_general">General Checklist</label>
+                    <div class="col-md-6">
+                      <div class="checkbox">
+                        <label for="ce_general-1">
+                          <input type="checkbox" name="ce_general-1" id="ce_general-1" value="ce_general-1">
+                          Straighten shelves, clean up garbage
+                        </label>
+                    	</div>
+                      <div class="checkbox">
+                        <label for="ce_general-2">
+                          <input type="checkbox" name="ce_general-2" id="ce_general-2" value="ce_general-2">
+                          All Bintags in place
+                        </label>
+                    	</div>
+                      <div class="checkbox">
+                        <label for="ce_general-3">
+                          <input type="checkbox" name="ce_general-3" id="ce_general-3" value="ce_general-3">
+                          Defect damaged/bad products (w/ manager approval)
+                        </label>
+                    	</div>
+                    	<div class="checkbox">
+                        <label for="ce_general-4">
+                          <input type="checkbox" name="ce_general-4" id="ce_general-4" value="ce_general-4">
+                          Discuss stock &amp; display issues with on-duty Dept Manager
+                        </label>
+                    	</div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-6 control-label" for="ce_notes">Colonial Elegance Notes</label>
+                    <div class="col-md-6">                     
+                      <textarea class="form-control" id="ce_notes" name="ce_notes"></textarea>
+                    </div>
+                  </div>
+                </div>
+    <!-- Genie Tab -->
+                <div id="tabs-2">
+                  <div class="form-group">
+                    <label class="col-md-6 control-label" for="checkboxes"><br>Check for Out Of Stocks<br>(ONLY CHECK IF OUT OF STOCK)</label>
+                    <div class="col-md-6">
+                      <div class="checkbox">
+                        <br><label for="checkboxes-0">
+                          <input type="checkbox" name="genie_oos-1" id="genie_oos-1" value="genie_oos-1">
+                          425-1691 (#4062-TKC, PowerMax 1500)
+                        </label>
+                    	</div>
+                      <div class="checkbox">
+                        <label for="checkboxes-1">
+                          <input type="checkbox" name="genie_oos-2" id="genie_oos-2" value="genie_oos-2">
+                          425-1689 (#2036-TV, Chain Drive 525)
+                        </label>
+                    	</div>
+                      <div class="checkbox">
+                        <label for="checkboxes-2">
+                          <input type="checkbox" name="genie_oos-3" id="genie_oos-3" value="genie_oos-3">
+                          425-2547 (#EKSC, Screw Drive 8ft Extension Kit)
+                        </label>
+                    	</div>
+                      <div class="checkbox">
+                        <label for="checkboxes-3">
+                          <input type="checkbox" name="genie_oos-4" id="genie_oos-4" value="genie_oos-4">
+                          425-2548 (#EKCR, Chain Lift 8ft Extension Kit)
+                        </label>
+                    	</div>
+                      <div class="checkbox">
+                        <label for="checkboxes-4">
+                          <input type="checkbox" name="genie_oos-5" id="genie_oos-5" value="genie_oos-5">
+                          425-4040 (#37335R, Master Remote Control)
+                        </label>
+                    	</div>
+                      <div class="checkbox">
+                        <label for="checkboxes-5">
+                          <input type="checkbox" name="genie_oos-6" id="genie_oos-6" value="genie_oos-6">
+                          425-1720 (#GSTB-R, Replacement Safe-T-Beam System)
+                        </label>
+                    	</div>
+                      <div class="checkbox">
+                        <label for="checkboxes-6">
+                          <input type="checkbox" name="genie_oos-7" id="genie_oos-7" value="genie_oos-7">
+                          425-2388 (#GLU-3, Screwdrive Lubricant)
+                        </label>
+                    	</div>
+                      <div class="checkbox">
+                        <label for="checkboxes-7">
+                          <input type="checkbox" name="genie_oos-8" id="genie_oos-8" value="genie_oos-8">
+                          425-2445 (#G3T-R, 3 Button Intellicode Remote)
+                        </label>
+                    	</div>
+                      <div class="checkbox">
+                        <label for="checkboxes-8">
+                          <input type="checkbox" name="genie_oos-9" id="genie_oos-9" value="genie_oos-9">
+                          425-2391 (#GK-R37332R, Keyless Entry Intellicode Remote)
+                        </label>
+                    	</div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-6 control-label" for="genie700">Genie 700 Head still in stock? (425-1685)</label>
+                    <div class="col-md-6">
+                      <div class="radio">
+                        <label for="genie700-0">
+                          <input type="radio" name="genie700" id="genie700-1" value="genie700-1">
+                            Yes
+                          </label>
+                      	</div>
+                        <div class="radio">
+                          <label for="genie700-1">
+                            <input type="radio" name="genie700" id="genie700-2" value="genie700-2">
+                            No
+                          </label>
+                      	</div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-md-6 control-label" for="genie-general">General Checklist</label>
+                      <div class="col-md-6">
+                        <div class="checkbox">
+                          <label for="checkboxes-0">
+                            <input type="checkbox" name="genie-general" id="genie-general-1" value="1">
+                            Display POP signs in good condition
+                          </label>
+                      	</div>
+                        <div class="checkbox">
+                          <label for="checkboxes-1">
+                            <input type="checkbox" name="genie-general" id="genie-general-2" value="2">
+                            Price labels on POP signs
+                          </label>
+                      	</div>
+                        <div class="checkbox">
+                          <label for="checkboxes-2">
+                            <input type="checkbox" name="genie-general" id="genie-general-3" value="3">
+                            All Bintags in place
+                          </label>
+                      	</div>
+                        <div class="checkbox">
+                          <label for="checkboxes-3">
+                            <input type="checkbox" name="genie-general" id="genie-general-4" value="4">
+                            Discuss stock &amp; display issues with on-duty Dept Manager
+                          </label>
+                      	</div>
+                      </div>
+                    </div>
+                  
+                  
+                  <div class="form-group">
+                    <label class="col-md-6 control-label" for="genie_notes">Genie Notes</label>
+                    <div class="col-md-6">                     
+                      <textarea class="form-control" id="genie_notes" name="genie_notes"></textarea>
+                    </div>
+                  </div>
+                </div>
+    <!-- Honeywell Tab -->
+                <div id="tabs-3">
+                  <div class="form-group">
+                    <label class="col-md-6 control-label" for="hw_manager"><br>Dept Manager</label>  
+                    <div class="col-md-6">
+                    <br>
+                    <input id="hw_manager" name="hw_manager" type="text" placeholder="" class="form-control input-md">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-6 control-label" for="hw_upload">Upload Call Sheet<br>(Not required if this form is filled out 100%)</label>
+                    <div class="col-md-6">
+                      <input id="hw_upload" name="hw_upload" class="input-file" type="file">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-6 control-label" for="checkboxes">Check for Out Of Stocks<br>(ONLY CHECK IF OUT OF STOCK)</label>
+                    <div class="col-md-6">
+                    <div class="checkbox">
+                      <label for="checkboxes-0">
+                        <input type="checkbox" name="hw_oos-1" id="hw_oos-1" value="hw_oos-1">
+                        335-1566 (#CG511A, Small/Med T-Stat Guard)
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="checkboxes-1">
+                        <input type="checkbox" name="hw_oos-2" id="hw_oos-2" value="hw_oos-2">
+                        335-1579 (#CG512A, Large T-Stat Guard)
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="checkboxes-2">
+                        <input type="checkbox" name="hw_oos-3" id="hw_oos-3" value="hw_oos-3">
+                        636-0310 (#RTH6580WF, WIFI 7 Day Programmable)
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="checkboxes-3">
+                        <input type="checkbox" name="hw_oos-4" id="hw_oos-4" value="hw_oos-4">
+                        636-0320 (#RTH8580WF, WIFI 7 Day Programmable Touchscreen)
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="checkboxes-4">
+                        <input type="checkbox" name="hw_oos-5" id="hw_oos-5" value="hw_oos-5">
+                        636-0325 (#RTH9580WF, WIFI Smart Thermostat)
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="checkboxes-5">
+                        <input type="checkbox" name="hw_oos-6" id="hw_oos-6" value="hw_oos-6">
+                        636-0328 (#RCH9300WF, Lyric Smart Thermostat)
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="checkboxes-6">
+                        <input type="checkbox" name="hw_oos-7" id="hw_oos-7" value="hw_oos-7">
+                        335-1813 (#RTH6350D, 5-2 Programmable Deluxe)
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="checkboxes-7">
+                        <input type="checkbox" name="hw_oos-8" id="hw_oos-8" value="hw_oos-8">
+                        335-1830 (#RTH6450D, 5-1-1 Programmable Deluxe)
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="checkboxes-8">
+                        <input type="checkbox" name="hw_oos-9" id="hw_oos-9" value="hw_oos-9">
+                        335-1832 (#YRTH7500D, 7 Day Programmable)
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="checkboxes-9">
+                        <input type="checkbox" name="hw_oos-10" id="hw_oos-10" value="hw_oos-10">
+                        335-1833 (#RTH7600D, 7 Day Programmable Touchscreen)
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="checkboxes-10">
+                        <input type="checkbox" name="hw_oos-11" id="hw_oos-11" value="hw_oos-11">
+                        636-0205 (#RTH2300B, 5-2 Programmable)
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="checkboxes-11">
+                        <input type="checkbox" name="hw_oos-12" id="hw_oos-12" value="hw_oos-12">
+                        636-0210 (#RTH2410B, 5-1-1 Programmable)
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="checkboxes-12">
+                        <input type="checkbox" name="hw_oos-13" id="hw_oos-13" value="hw_oos-13">
+                        636-0220 (#RTH2510B, 7 Day Programmable)
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="checkboxes-13">
+                        <input type="checkbox" name="hw_oos-14" id="hw_oos-14" value="hw_oos-14">
+                        636-0150 (#RTH111B, Basic Digital Manual
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="checkboxes-14">
+                        <input type="checkbox" name="hw_oos-15" id="hw_oos-15" value="hw_oos-15">
+                        636-0200 (#RTH221B, Basic Digital Programmable)
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="checkboxes-15">
+                        <input type="checkbox" name="hw_oos-16" id="hw_oos-16" value="hw_oos-16">
+                        335-1837 (#CW200A1032, Winter Watchman)
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="checkboxes-16">
+                        <input type="checkbox" name="hw_oos-17" id="hw_oos-17" value="hw_oos-17">
+                        335-1779 (#H8908B1002, Humidistat)
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="checkboxes-17">
+                        <input type="checkbox" name="hw_oos-18" id="hw_oos-18" value="hw_oos-18">
+                        335-1885 (#CT50K1028E, Low-Temp Garage Thermostat)
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="checkboxes-18">
+                        <input type="checkbox" name="hw_oos-19" id="hw_oos-19" value="hw_oos-19">
+                        335-1785 (#CT87K1003, Mercury Free Round Heat Only)
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="checkboxes-19">
+                        <input type="checkbox" name="hw_oos-20" id="hw_oos-20" value="hw_oos-20">
+                        335-1798 (#CT87N1006, Mercury Free Round Heat/Cool)
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="checkboxes-20">
+                        <input type="checkbox" name="hw_oos-21" id="hw_oos-21" value="hw_oos-21">
+                        335-1879 (#CT30A, Economy Heat Only)
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="checkboxes-21">
+                        <input type="checkbox" name="hw_oos-22" id="hw_oos-22" value="hw_oos-22">
+                        335-1895 (#CT31A, Economy Heat/Cool)
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="checkboxes-22">
+                        <input type="checkbox" name="hw_oos-23" id="hw_oos-23" value="hw_oos-23">
+                        335-2001 (#CQ100A1021, 18" Thermocouple)
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="checkboxes-23">
+                        <input type="checkbox" name="hw_oos-24" id="hw_oos-24" value="hw_oos-24">
+                        335-2014 (#CQ100A1013, 24" Thermocouple)
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="checkboxes-24">
+                        <input type="checkbox" name="hw_oos-25" id="hw_oos-25" value="hw_oos-25">
+                        335-2027 (#CQ100A1039, 30" Thermocouple)
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="checkboxes-25">
+                        <input type="checkbox" name="hw_oos-26" id="hw_oos-26" value="hw_oos-26">
+                        335-2030 (#CQ100A1005, 36" Thermocouple)
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="checkboxes-26">
+                        <input type="checkbox" name="hw_oos-27" id="hw_oos-27" value="hw_oos-27">
+                        639-9948 (#RUVLAMP1, UV Air Treatment)
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="checkboxes-27">
+                        <input type="checkbox" name="hw_oos-28" id="hw_oos-28" value="hw_oos-28">
+                        639-9949 (#RUVBULB1, UV Air Bulb)
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="checkboxes-28">
+                        <input type="checkbox" name="hw_oos-29" id="hw_oos-29" value="hw_oos-29">
+                        639-9978 (#HE240A, 3000 sq.ft. Whole House Humidifier)
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="checkboxes-29">
+                        <input type="checkbox" name="hw_oos-30" id="hw_oos-30" value="hw_oos-30">
+                        639-9979 (#HE280, 4000 sq.ft. Whole House Humidifier)
+                      </label>
+                  	</div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-6 control-label" for="hw_lit">Literature Reorder?</label>
+                    <div class="col-md-6">
+                    <div class="checkbox">
+                      <label for="hw_lit-0">
+                        <input type="checkbox" name="hw_lit" id="hw_lit-0" value="hw_lit-1">
+                        Thermostat Brochures
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="hw_lit-1">
+                        <input type="checkbox" name="hw_lit" id="hw_lit-1" value="hw_lit-2">
+                        Indoor Air Quality Brochures
+                      </label>
+                  	</div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-6 control-label" for="hw_general">General Checklist</label>
+                    <div class="col-md-6">
+                    <div class="checkbox">
+                      <label for="hw_general-0">
+                        <input type="checkbox" name="hw_general" id="hw_general-0" value="hw_general-1">
+                        All Bintags in place
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="hw_general-1">
+                        <input type="checkbox" name="hw_general" id="hw_general-1" value="hw_general-2">
+                        Front-Face all items
+                      </label>
+                  	</div>
+                    <div class="checkbox">
+                      <label for="hw_general-2">
+                        <input type="checkbox" name="hw_general" id="hw_general-2" value="hw_general-3">
+                        Discuss stock issues with on-duty Dept Manager
+                      </label>
+                  	</div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-6 control-label" for="hw_notes">Honeywell Notes</label>
+                    <div class="col-md-6">                     
+                      <textarea class="form-control" id="hw_notes" name="hw_notes"></textarea>
+                    </div>
+                  </div>
+                </div>
+    <!-- Summit Brands Tab -->
+                <div id="tabs-4"><br>
+                  <div class="well">
+                    <div class="w3-responsive">
+                      <table class="w3-table w3-striped w3-bordered w3-border"><br>
+                        <tr>
+                          <th>In Stock</th>
+                          <th>SKU</th>
+                          <th>Product</th>
+                          <th>MFG #</th>
+                          <th>Location</th>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label class="switch">
+                              <input type="checkbox">
+                              <div class="slider round"></div>
+                            </label>
+                          </td>
+                          <td>647-1315</td>
+                          <td>Super Iron Out 30oz.</td>
+                          <td>IO30N</td>
+                          <td>Upfront by cleaners</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label class="switch">
+                              <input type="checkbox">
+                              <div class="slider round"></div>
+                            </label>
+                          </td>
+                          <td>647-1317</td>
+                          <td>Super Iron Out 5lb.</td>
+                          <td>IO65N</td>
+                          <td>Upfront by cleaners</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label class="switch">
+                              <input type="checkbox">
+                              <div class="slider round"></div>
+                            </label>
+                          </td>
+                          <td>647-1323</td>
+                          <td>Super Iron Out 10lb.</td>
+                          <td>IO10N</td>
+                          <td>Upfront by cleaners</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label class="switch">
+                              <input type="checkbox">
+                              <div class="slider round"></div>
+                            </label>
+                          </td>
+                          <td>647-1320</td>
+                          <td>Lime Out</td>
+                          <td>A06N</td>
+                          <td>Upfront by cleaners</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label class="switch">
+                              <input type="checkbox">
+                              <div class="slider round"></div>
+                            </label>
+                          </td>
+                          <td>647-1321</td>
+                          <td>Dishwasher Magic</td>
+                          <td>DM06N</td>
+                          <td>Upfront by cleaners</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label class="switch">
+                              <input type="checkbox">
+                              <div class="slider round"></div>
+                            </label>
+                          </td>
+                          <td>647-1330</td>
+                          <td>Plink</td>
+                          <td>PLM12T</td>
+                          <td>Upfront by cleaners</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label class="switch">
+                              <input type="checkbox">
+                              <div class="slider round"></div>
+                            </label>
+                          </td>
+                          <td>647-1333</td>
+                          <td>Glisten</td>
+                          <td>DM0616N</td>
+                          <td>Upfront by cleaners</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label class="switch">
+                              <input type="checkbox">
+                              <div class="slider round"></div>
+                            </label>
+                          </td>
+                          <td>647-1305</td>
+                          <td>2 in 1 Toilet/Septic Cleaner</td>
+                          <td>C-SB0612N</td>
+                          <td>Upfront by cleaners</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label class="switch">
+                              <input type="checkbox">
+                              <div class="slider round"></div>
+                            </label>
+                          </td>
+                          <td>647-1322</td>
+                          <td>Washer Magic</td>
+                          <td>WM06N</td>
+                          <td>Upfront by laundry detergent</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label class="switch">
+                              <input type="checkbox">
+                              <div class="slider round"></div>
+                            </label>
+                          </td>
+                          <td>647-1302</td>
+                          <td>White Brite</td>
+                          <td>WB30N</td>
+                          <td>Upfront by laundry detergent</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label class="switch">
+                              <input type="checkbox">
+                              <div class="slider round"></div>
+                            </label>
+                          </td>
+                          <td>647-3100</td>
+                          <td>Woolite</td>
+                          <td>11016</td>
+                          <td>Upfront by laundry detergent</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label class="switch">
+                              <input type="checkbox">
+                              <div class="slider round"></div>
+                            </label>
+                          </td>
+                          <td>647-1335</td>
+                          <td>Drain Out Kitchen</td>
+                          <td>DOB06N</td>
+                          <td>Rough Plumbing Area</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label class="switch">
+                              <input type="checkbox">
+                              <div class="slider round"></div>
+                            </label>
+                          </td>
+                          <td>647-1325</td>
+                          <td>Potassium Perm</td>
+                          <td>PF65N</td>
+                          <td>By the Water Softeners</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label class="switch">
+                              <input type="checkbox">
+                              <div class="slider round"></div>
+                            </label>
+                          </td>
+                          <td>647-3918</td>
+                          <td>Softener Cleaner</td>
+                          <td>TO06N</td>
+                          <td>By the Water Softeners</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label class="switch">
+                              <input type="checkbox">
+                              <div class="slider round"></div>
+                            </label>
+                          </td>
+                          <td>647-3917</td>
+                          <td>Liquid Softener</td>
+                          <td>RK06N</td>
+                          <td>By the Water Softeners</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label class="switch">
+                              <input type="checkbox">
+                              <div class="slider round"></div>
+                            </label>
+                          </td>
+                          <td>647-3900</td>
+                          <td>Home Test Kits</td>
+                          <td>TK06N</td>
+                          <td>By the Water Softeners</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label class="switch">
+                              <input type="checkbox">
+                              <div class="slider round"></div>
+                            </label>
+                          </td>
+                          <td>647-3136</td>
+                          <td>Disposer Care</td>
+                          <td>DP06N</td>
+                          <td>By the Garbage Disposers</td>
+                        </tr>
+                      </table><br>
+                      <table class="w3-table w3-striped w3-bordered w3-border col-md-12">
+                        <tr>
+                          <th class></th>
+                          <th class>General Checklist</th>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label class="switch">
+                              <input type="checkbox">
+                              <div class="slider round"></div>
+                            </label>
+                          </td>
+                          <td>Checked for product on endcaps</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label class="switch">
+                              <input type="checkbox">
+                              <div class="slider round"></div>
+                            </label>
+                          </td>
+                          <td>Front-faced all items</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label class="switch">
+                              <input type="checkbox">
+                              <div class="slider round"></div>
+                            </label>
+                          </td>
+                          <td>All Bintags in place</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label class="switch">
+                              <input type="checkbox">
+                              <div class="slider round"></div>
+                            </label>
+                          </td>
+                          <td>Discuss stock issues with on-duty Dept Manager</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label class="col-md-6 control-label" for="summit_notes"><br>Summit Notes</label>
+                    <div class="col-md-6">                     
+                      <br><textarea class="form-control" id="summit_notes" name="summit_notes"></textarea>
+                    </div>
+                  </div>
+                </div>
+    <!-- All Stone Tab -->
+                <div id="tabs-5">
+                  <label class="col-md-6 control-label" for="as_lit"><br>Literature Reorder?</label>
+                    <div class="col-md-6">
+                      <div class="radio">
+                        <br><label for="as_lit-0">
+                          <input type="radio" name="as_lit" id="as_lit-0" value="as_lit-1" checked="checked">
+                          Yes
+                        </label>
+                    	</div>
+                      <div class="radio">
+                        <label for="as_lit-1">
+                          <input type="radio" name="as_lit" id="as_lit-1" value="as_lit-2">
+                          No
+                        </label>
+                      </div>
+                    </div>
+                  <div class="form-group">
+                    <label class="col-md-6 control-label" for="allstone_notes"><br>All Stone Notes</label>
+                    <div class="col-md-6">                     
+                      <br><textarea class="form-control" id="allstone_notes" name="allstone_notes"></textarea>
+                    </div>
+                  </div>
+                </div>
+    <!-- Tuscany Tab -->
+                <div id="tabs-6">
+                    <div class="form-group">
+                      <label class="col-md-6 control-label" for="tuscany_notes">Tuscany Notes</label>
+                      <div class="col-md-6">                     
+                        <textarea class="form-control" id="tuscany_notes" name="tuscany_notes"></textarea>
+                      </div>
+                    </div>
+                </div>
+    <!-- End of Tabs -->
+              </ol>
+            </div>
+            <div class="form-group">
+              <label class="col-md-6 control-label" for="cs_buttons"><br>Process Data</label>
+              <div class="col-md-6">
+                <br><button id="cs_save" name="cs_save" class="btn btn-success">Save</button>
+                <button id="cs_submit" name="cs_submit" class="btn btn-primary">Submit</button>
+                <button id="cs_reset" name="cs_reset" class="btn btn-danger">Reset</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </body>
+</html>

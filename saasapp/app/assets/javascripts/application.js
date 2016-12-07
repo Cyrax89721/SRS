@@ -12,6 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.dataTables
+//= require dataTables.bootstrap
+//= require dataTables.responsive
+//= require dataTables.colReorder
+//= require dataTables.fixedHeader
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .

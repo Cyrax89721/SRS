@@ -45,6 +45,14 @@ gem 'hirb', '0.7.3'
 # Use Devise for user authentication
 gem 'devise', '4.2.0'
 
+# Use PDF Reader for PDF Extraction
+gem 'pdf-reader', '1.3.3'
+
+# Use GMaps for Google Maps Integration
+gem 'gmaps4rails', '2.1.2'
+
+
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'

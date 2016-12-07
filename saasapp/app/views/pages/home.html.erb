@@ -1,3 +1,49 @@
-<div class="home-callout text-center container-fluid">
-    <h1>Home Page</h1>
-</div>
+    <h1 class="text-center">Store List</h1>
+    <div class="container-fluid">
+      <table class="table-sm">
+        <thead class="thead-inverse">
+          <tr>
+            <th >Yard #</th>
+            <th>Abbreviation</th>
+            <th>Name</th>
+            <th>Prototype</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>Phone #</th>
+            <th>Service Rep</th>
+            <th>User ID</th>
+            <th>Notes</th>
+            <th>Last Visit</th>
+            <th>Created At</th>
+            <th>Updated At</th>
+          </tr>
+        </thead>
+        <tbody class="table-striped table-hover">
+          <% @stores.each do |store| %>
+            <tr>
+              <td><%= store.yard %></td>
+              <td><%= store.abbrv %></td>
+              <td><%= store.name %></td>
+              <td><%= store.prototype %></td>
+              <td><%= store.address %></td>
+              <td><%= store.city %></td>
+              <td><%= store.state %></td>
+              <td><%= store.zipcode %></td>
+              <td><%= store.lat %></td>
+              <td><%= store.long %></td>
+              <td><%= store.phone %></td>
+              <td><%= store.service_rep %></td>
+              <td><%= store.user_id %></td>
+              <td><%= store.notes %></td>
+              <td><%= store.lastvisit %></td>
+              <td><%= store.created_at %></td>
+              <td><%= store.updated_at %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
